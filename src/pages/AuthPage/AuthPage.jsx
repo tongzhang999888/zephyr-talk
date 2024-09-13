@@ -2,7 +2,7 @@ import React from "react";
 import BG from "../../components/bg/BG";
 import { Outlet } from "react-router-dom";
 import Notification from "../../components/notification/Notification";
-
+import "./authpage.scss";
 const AuthPage = () => {
   return (
     <BG>

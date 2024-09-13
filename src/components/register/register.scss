@@ -14,11 +14,12 @@
   padding: 60px 0;
   box-shadow: 0 0 10px $bg-color, inset 0 0 180px #0c59f35d;
   h1 {
-    text-shadow: 0 0 16px #003bb05d;
+    // text-shadow: 0 0 16px #003bb05d;
     letter-spacing: 16px;
     text-indent: 16px;
     color: #dce8ff;
     font-size: 34px;
+    background-color: transparent;
   }
   input {
     border: none;
@@ -36,6 +37,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: transparent;
     button {
       color: #dce8ff;
       border: none;

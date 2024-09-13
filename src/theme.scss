@@ -28,18 +28,30 @@ $light-blue-login-theme: $bg-light-blue, $very-light-blue, $very-deep-blue,
 $dark-blue-theme: white, $bg-dark-blue;
 $light-blue-theme: $very-deep-blue, $bg-light-blue;
 @mixin theme($text, $bg) {
-  background-color: $bg;
-  color: $text;
+  & {
+    background-color: $bg;
+    color: $text;
+  }
+  input::placeholder {
+    color: $text;
+    opacity: 0.6;
+  }
   svg {
     fill: $text;
   }
 }
 @mixin auth-theme($form-bg, $input-text, $input-bg, $btn-bg, $btn-text, $link) {
-  background-color: $form-bg;
-  box-shadow: 0 0 10px $form-bg, inset 0 0 30px $form-bg;
+  & {
+    background-color: $form-bg;
+    box-shadow: 0 0 10px $form-bg, inset 0 0 30px $form-bg;
+  }
   input {
     background-color: $input-bg;
     color: $input-text;
+    &::placeholder {
+      color: $input-text;
+      opacity: 0.6;
+    }
   }
   h1 {
     color: $input-bg;

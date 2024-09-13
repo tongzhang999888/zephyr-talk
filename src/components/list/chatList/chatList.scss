@@ -41,9 +41,6 @@
       }
       input {
         flex: 1;
-        @include md {
-          width: 0px;
-        }
         background-color: transparent;
         height: 100%;
         padding: 0 10px;
@@ -51,6 +48,9 @@
         border: none;
         outline: none;
         // color: white;
+        @include md {
+          width: 0px;
+        }
       }
     }
     svg.add {

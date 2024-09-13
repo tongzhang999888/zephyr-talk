@@ -1,0 +1,9 @@
+@import "../../responsive.scss";
+@import "../../theme.scss";
+
+[data-theme="light"] {
+  .login,
+  .register {
+    @include auth-theme($light-blue-login-theme...);
+  }
+}
