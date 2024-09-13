@@ -1,0 +1,91 @@
+@import "../../responsive.scss";
+@import "../../theme.scss";
+.chat-container {
+  height: 90vh;
+  width: 90vw;
+  border-radius: 20px;
+  background-color: $bg-color;
+  backdrop-filter: blur(16px) saturate(180%);
+  color: white;
+  display: flex;
+  overflow: hidden;
+  @include theme($dark-blue-theme...);
+  input,
+  .searchbar {
+    border: 1px solid white;
+    color: white;
+  }
+  button.block {
+    background-color: rgba(255, 36, 36, 0.281);
+
+    &:hover {
+      background-color: rgba(255, 36, 36, 0.455);
+    }
+  }
+  .chat {
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+
+    .top {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+  .detail {
+    .top {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+  .userchatlist {
+    .chatitem {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}
+[data-theme="light"] .chat-container {
+  @include theme($light-blue-theme...);
+  input,
+  .searchbar {
+    color: $very-deep-blue;
+    border: 1px solid $very-deep-blue;
+    background-color: transparent;
+  }
+  button.block {
+    background-color: rgba(225, 29, 62, 0.692);
+
+    &:hover {
+      background-color: rgba(243, 17, 55, 0.86);
+    }
+  }
+  .chat {
+    border-left: 1px solid $border-blue;
+    border-right: 1px solid $border-blue;
+    @include md {
+      border-right: none;
+    }
+    @include sm {
+      border-left: none;
+    }
+    .top {
+      border-bottom: 1px solid $border-blue;
+    }
+  }
+  .detail {
+    .top {
+      border-bottom: 1px solid $border-blue;
+    }
+  }
+  .userchatlist {
+    .chatitem {
+      border-bottom: 1px solid $border-blue;
+    }
+  }
+  .message p {
+    background-color: $light-message-blue;
+  }
+  .own-message {
+    color: white;
+    span {
+      color: $very-deep-blue;
+    }
+  }
+}

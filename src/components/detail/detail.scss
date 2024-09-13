@@ -1,0 +1,130 @@
+@import "../../responsive.scss";
+
+.detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  span {
+    font-size: 16px;
+  }
+  @include md {
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    // background-color: #050a24de;
+    background-color: inherit;
+    width: 350px;
+    height: 90vh;
+    transition: linear 0.3s;
+    &.show {
+      transform: translateX(0);
+    }
+  }
+  @include sm {
+    width: 300px;
+  }
+  @include xsm {
+    width: 100%;
+  }
+  .top {
+    display: flex;
+    padding: 10px 0px;
+    // border-bottom: 1px solid $border-color;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    .close-detail {
+      display: none;
+      @include md {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 32px;
+        opacity: 0.7;
+        transform: translate(50%, 50%);
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          transform: translate(50%, 50%) rotate(180deg);
+          opacity: 0.95;
+        }
+      }
+    }
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  .options {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    flex: 1;
+    img {
+      width: 24px;
+      height: 24px;
+      padding: 7px;
+      background-color: $input-bg-color;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      span {
+        flex: 1;
+      }
+      button.block {
+        width: 100%;
+        border: none;
+        padding: 2px 0;
+        // background-color: rgba(255, 36, 36, 0.281);
+        transition: 0.2s;
+        color: white;
+        cursor: pointer;
+        // &:hover {
+        //   // background-color: rgba(255, 36, 36, 0.455);
+        // }
+      }
+    }
+    .photos {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      overflow: auto;
+      .photo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .photo-img {
+          width: 40px;
+          height: 40px;
+          padding: 0;
+          object-fit: cover;
+          border-radius: 5px;
+        }
+        span {
+          flex: 1;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

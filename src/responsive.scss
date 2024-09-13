@@ -1,0 +1,26 @@
+$border-color: #dddddd35;
+$bg-color: #050a24bd;
+$input-bg-color: #050a24bd;
+$blue: #5184f8;
+$grey: #bbbbbbc1;
+
+@mixin xsm {
+  @media (max-width: 488px) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (max-width: 868px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: 1330px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}

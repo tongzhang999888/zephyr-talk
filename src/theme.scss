@@ -1,0 +1,54 @@
+$border-gray: #dddddd35;
+$bg-dark-blue: #050a24bd;
+$input-bg-dark-blue: #050a24bd;
+
+$border-blue: #2364e650;
+
+$bg-light-blue: #dce8fff8;
+$light-message-blue: #c7d8f7;
+$light-hover-bg: #c7d8f7;
+$light-hover-content: #0f53d7;
+$dark-hover-bg: #c7d8f7;
+$dark-hover-content: #c7d8f7;
+$light-active-bg: #0f53d7;
+$light-active-content: #dce8ff;
+$dark-active-bg: #c7d8f7;
+$dark-active-content: #c7d8f7;
+
+$very-light-blue: #dce8ff;
+$light-blue: #5d8ef0;
+$deep-blue: #0f53d7;
+$very-deep-blue: #0f53d7;
+
+$dark-blue-login-theme: $bg-dark-blue, $very-deep-blue, $very-light-blue,
+  $very-deep-blue, $very-light-blue, $very-light-blue;
+$light-blue-login-theme: $bg-light-blue, $very-light-blue, $very-deep-blue,
+  $very-deep-blue, $very-light-blue, $very-deep-blue;
+
+$dark-blue-theme: white, $bg-dark-blue;
+$light-blue-theme: $very-deep-blue, $bg-light-blue;
+@mixin theme($text, $bg) {
+  background-color: $bg;
+  color: $text;
+  svg {
+    fill: $text;
+  }
+}
+@mixin auth-theme($form-bg, $input-text, $input-bg, $btn-bg, $btn-text, $link) {
+  background-color: $form-bg;
+  box-shadow: 0 0 10px $form-bg, inset 0 0 30px $form-bg;
+  input {
+    background-color: $input-bg;
+    color: $input-text;
+  }
+  h1 {
+    color: $input-bg;
+  }
+  button {
+    background-color: $btn-bg;
+    color: $btn-text;
+  }
+  a {
+    color: $link;
+  }
+}

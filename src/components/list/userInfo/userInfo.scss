@@ -1,0 +1,42 @@
+@import "../../../responsive.scss";
+
+.userinfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  @include md {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    img,
+    svg {
+      width: 45px;
+      height: 45px;
+      margin-right: 10px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    h2 {
+      font-size: 18px;
+    }
+  }
+  .icons {
+    display: flex;
+    gap: 12px;
+    @include md {
+      align-self: flex-end;
+    }
+    img,
+    svg {
+      width: 16px;
+      height: 16px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+}

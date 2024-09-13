@@ -1,0 +1,53 @@
+@import "../../responsive.scss";
+@import "../../theme.scss";
+.mainpage {
+  display: flex;
+  height: 90vh;
+  width: 90vw;
+  border-radius: 20px;
+  backdrop-filter: blur(16px) saturate(180%);
+  color: white;
+  overflow: hidden;
+  svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  @include theme($dark-blue-theme...);
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .sidebar {
+    border-right: 1px solid $border-color;
+  }
+}
+[data-theme="light"] .mainpage {
+  @include theme($light-blue-theme...);
+  a {
+    text-decoration: none;
+    color: $very-deep-blue;
+  }
+  .sidebar {
+    border-right: 1px solid $border-blue;
+    // @include sm {
+    //   border: none;
+    // }
+    .sidebar-item {
+      &:hover {
+        background-color: $light-hover-bg;
+        color: $light-hover-content;
+        svg {
+          fill: $light-hover-content;
+        }
+      }
+      &.active {
+        background-color: $light-active-bg;
+        color: $light-active-content;
+        svg {
+          fill: $light-active-content;
+        }
+      }
+    }
+  }
+}

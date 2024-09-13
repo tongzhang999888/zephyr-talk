@@ -1,0 +1,97 @@
+@import "../../../responsive.scss";
+
+.chatlist {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 20px;
+  overflow: hidden;
+  svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  span {
+    font-size: 16px;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    .searchbar {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      // background-color: $input-bg-color;
+      height: 35px;
+      border-radius: 16px;
+      padding: 0 10px;
+
+      img,
+      svg {
+        width: 20px;
+        height: 20px;
+        cursor: text;
+      }
+      input {
+        flex: 1;
+        @include md {
+          width: 0px;
+        }
+        background-color: transparent;
+        height: 100%;
+        padding: 0 10px;
+
+        border: none;
+        outline: none;
+        // color: white;
+      }
+    }
+    svg.add {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .userchatlist {
+    overflow: auto;
+    flex: 1;
+    .chatitem {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      height: 80px;
+      // border-bottom: 1px solid $border-color;
+      margin-right: 10px;
+      padding: 10px;
+      margin-right: 0;
+      img,
+      svg {
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .info {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column;
+        & :first-child {
+          font-weight: 500;
+        }
+        & :last-child {
+          font-size: 13px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

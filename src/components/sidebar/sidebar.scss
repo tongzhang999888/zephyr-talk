@@ -1,0 +1,51 @@
+@import "../../responsive.scss";
+.sidebar {
+  width: 200px;
+  height: 100%;
+  font-size: 18px;
+  letter-spacing: 6px;
+  font-weight: bold;
+  .sidebar-wrapper {
+    padding: 20px 10px;
+    height: 100%;
+    .sidebar-options {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+
+      .top-options {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .bottom-options {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .sidebar-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        transition: 0.3s;
+        opacity: 0.9;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 5px 10px;
+      }
+    }
+  }
+  &.minimal {
+    width: 65px;
+    span {
+      display: none;
+    }
+    .sidebar-options .sidebar-item {
+      justify-content: center;
+      padding: 5px;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@import "../../responsive.scss";
+
+.bg {
+  position: absolute;
+  height: 90vh;
+  width: 90vw;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: #dce8ff;
+  z-index: -1;
+
+  .bottom {
+    position: absolute;
+    height: 400rem;
+    width: 400rem;
+    max-height: 40vh;
+    max-width: 40vh;
+    background-color: #5d8ef0;
+    border-radius: 50%;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -70%);
+    animation: move3 10s linear infinite reverse;
+
+    // @include xsm {
+    //   height: 650rem;
+    //   width: 650rem;
+    // }
+  }
+  .center {
+    position: absolute;
+    height: 1200rem;
+    width: 1200rem;
+    max-height: 120vh;
+    max-width: 120vh;
+    background-color: #0f53d7;
+    border-radius: 50%;
+    left: 0;
+    top: 50%;
+    transform: translate(-20%, 0%);
+    animation: move2 10s linear infinite reverse;
+    // @include md {
+    //   height: 55rem;
+    //   width: 55rem;
+    // }
+    // @include xsm {
+    //   height: 35rem;
+    //   width: 35rem;
+    // }
+  }
+  .top {
+    position: absolute;
+    height: 900rem;
+    width: 900rem;
+    max-height: 90vh;
+    max-width: 90vh;
+    background-color: #003cb0;
+    border-radius: 50%;
+    right: 0;
+    transform: translate(18%, -30%);
+    animation: move1 10s linear infinite reverse;
+    // @include md {
+    //   height: 65rem;
+    //   width: 65rem;
+    // }
+    // @include sm {
+    //   height: 50rem;
+    //   width: 50rem;
+    // }
+    // @include xsm {
+    //   height: 90rem;
+    //   width: 90rem;
+    // }
+  }
+}
+@keyframes move1 {
+  0% {
+    transform: translate(18%, -30%);
+  }
+  25% {
+    transform: translate(28%, -20%);
+  }
+  50% {
+    transform: translate(38%, -30%);
+  }
+  75% {
+    transform: translate(28%, -35%);
+  }
+  100% {
+    transform: translate(18%, -30%);
+  }
+}
+@keyframes move2 {
+  0% {
+    transform: translate(-20%, 0%);
+  }
+  25% {
+    transform: translate(-30%, -10%);
+  }
+  50% {
+    transform: translate(0%, 0%);
+  }
+  75% {
+    transform: translate(0%, -10%);
+  }
+  100% {
+    transform: translate(-20%, 0%);
+  }
+}
+@keyframes move3 {
+  0% {
+    transform: translate(0, -70%);
+  }
+  25% {
+    transform: translate(30%, -85%);
+  }
+  50% {
+    transform: translate(-20%, -65%);
+  }
+  75% {
+    transform: translate(20%, -50%);
+  }
+  100% {
+    transform: translate(0, -70%);
+  }
+}
+.authcontainer {
+  height: 90vh;
+  width: 90vw;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}

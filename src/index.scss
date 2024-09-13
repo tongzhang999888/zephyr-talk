@@ -1,0 +1,35 @@
+@import "./responsive.scss";
+@import "./theme.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: inherit;
+}
+
+body {
+  // background: url("/bg.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  font-size: 16px;
+  //@include theme(black, white);
+}
+::-webkit-scrollbar {
+  width: 6px;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(5, 10, 36, 0.74);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(50, 86, 153, 0.702);
+
+  border-radius: 5px;
+}
